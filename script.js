@@ -61,8 +61,12 @@ require(['vs/editor/editor.main'], function () {
 
 // Atualizar Preview HTML
 function updatePreview(value) {
+  let htmlContent = marked.parse(value);
+
+  htmlContent = htmlContent.replace(/---pagebreak---/g, '<div class="page-break"></div>');
+
   const content = document.getElementById('markdownContent');
-  content.innerHTML = marked.parse(value);
+  content.innerHTML = htmlContent;
 }
 
 function applyTheme(isDark) {

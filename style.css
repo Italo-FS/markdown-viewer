@@ -110,7 +110,6 @@ body {
     display: none !important;
   }
 
-  /* Deixa só o preview visível e ocupando toda a largura */
   #previewPanel {
     display: block !important;
     width: 100% !important;
@@ -120,5 +119,13 @@ body {
 
   #markdownContent {
     padding: 20px;
+  }
+
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+    margin: 0;
+    padding: 0;
+    height: 0;
   }
 }
