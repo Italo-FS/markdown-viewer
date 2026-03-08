@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Viewer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Viewer</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="toolbar">
-        <div class="group">
-            <button id="toggleEditor" title="Alternar Editor">👁️ Alternar Editor</button>
-            <button id="resetButton" title="Resetar para padrão">🔄 Resetar</button>
-        </div>
-        
-        <div class="toolbar-separator"></div>
+  <header class="toolbar">
+    <div class="group">
+      <button id="toggleEditor" title="Alternar Editor">👁️ Alternar Editor</button>
+      <button id="resetButton" title="Resetar para padrão">🔄 Resetar</button>
+      <button id="printButton" title="Imprimir preview">🖨️ Imprimir</button>
+    </div>
 
-        <div class="group">
-            <label><input type="checkbox" id="syncScroll" checked> Scroll Sync</label>
-            <label><input type="checkbox" id="themeToggle"> Tema Escuro</label>
-        </div>
-    </header>
+    <div class="toolbar-separator"></div>
 
-    <main class="container" id="mainContainer">
-        <div id="editorContainer" class="panel"></div>
-        <div id="previewPanel" class="panel">
-            <div id="markdownContent" class="markdown-body"></div>
-        </div>
-    </main>
+    <div class="group">
+      <label><input type="checkbox" id="syncScroll" checked> Scroll Sync</label>
+      <label><input type="checkbox" id="themeToggle"> Tema Escuro</label>
+    </div>
+  </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
-    <script src="script.js"></script>
+  <main class="container" id="mainContainer">
+    <div id="editorContainer" class="panel"></div>
+    <div id="previewPanel" class="panel">
+      <div id="markdownContent" class="markdown-body"></div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
